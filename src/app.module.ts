@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { PostsModule } from './posts/posts.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigService, ConfigModule } from '@nestjs/config';
+import { UserModule } from './user/user.module';
 import envConfig from '../config/env';
 
 @Module({
@@ -29,6 +30,7 @@ import envConfig from '../config/env';
       }),
     }),
     PostsModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
